@@ -52,12 +52,14 @@ var getProperties = function(){
  	})
  	.done(function(response) {
  		console.log("success");
- 		$.each(response, function(index, val) {
-    		 /* iterate through array or object */
-    		 var property = showProperty(val);
-    		 $(".results").append(property);
-    	});
-
+ 		$(".loading").hide('slow/400/fast', function() {});
+ 		
+	 		$.each(response, function(index, val) {
+	    		 /* iterate through array or object */
+	    		 var property = showProperty(val); 
+	    		$(".results").append(property);
+	    	});
+ 		 
  	})
  	.fail(function() {
  		console.log("error");
@@ -78,6 +80,9 @@ var getProperties = function(){
 jQuery(document).ready(function($) {
 	$("#show-properties").on('click', function(event) {
 		event.preventDefault();
+		$(".loading").show('slow/400/fast', function() {
+			
+		});
 		/* Act on the event */
 		$(".results").html('');
 		getProperties();
