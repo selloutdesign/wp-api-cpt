@@ -51,6 +51,7 @@ var getProperties = function(){
  		
  	})
  	.done(function(response) {
+<<<<<<< HEAD
  		console.log("success");
  		$(".loading").hide('slow/400/fast', function() {});
  		
@@ -60,6 +61,18 @@ var getProperties = function(){
 	    		$(".results").append(property);
 	    	});
  		 
+=======
+ 		// console.log("success");
+ 		$(".loading").hide('slow/400/fast', function() {
+ 			
+ 		});
+ 		$.each(response, function(index, val) {
+    		 /* iterate through array or object */
+    		 var property = showProperty(val);
+    		 $(".results").append(property);
+    	});
+
+>>>>>>> gh-pages
  	})
  	.fail(function() {
  		console.log("error");
