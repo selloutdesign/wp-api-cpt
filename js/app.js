@@ -52,7 +52,7 @@ var getProperties = function(){
  	})
  	.done(function(response) {
 		 // console.log("success");
-		$(".loading").removeClass("hide");
+		
  		$(".loading").hide('slow/400/fast', function() {
  			
  		});
@@ -82,6 +82,7 @@ var getProperties = function(){
 jQuery(document).ready(function($) {
 	$("#show-properties").on('click', function(event) {
 		event.preventDefault();
+		$(".loading").removeClass("hide");
 		$(".loading").show('slow/400/fast', function() {
 			
 		});
