@@ -46,12 +46,13 @@ var getProperties = function(){
  //        });
  	$.ajax({
  		url: 'http://continentalvillagemhc.com/wp-json/wp/v2/property',
- 		type: 'GET',
+		type: 'GET',
  		dataType: 'json',
  		
  	})
  	.done(function(response) {
- 		// console.log("success");
+		 // console.log("success");
+		$(".loading").removeClass("hide");
  		$(".loading").hide('slow/400/fast', function() {
  			
  		});
