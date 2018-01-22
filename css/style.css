@@ -22,14 +22,10 @@
 }
 
 .loading{
-<<<<<<< HEAD
-	display:none;
-=======
 	display: none;
 	max-width: 10em;
 	margin: 0 auto;
 }
 .loading img{
 	width: 100%;
->>>>>>> gh-pages
 }
